@@ -1,0 +1,279 @@
+@import url(https://fonts.google.com/specimen/IBM+Plex+Mono?query=IBM&preview.text=Zhook);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono';
+    
+}
+.header-container {
+    text-transform: uppercase;
+    background-color: #4520AB;
+    font-size: 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+    flex-wrap: nowrap;
+    color: #ffc77a;
+}
+
+.nav{
+    display: flex;
+    width: 700px;
+    padding: 0 40px;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+    transition: 0.3s;
+}
+
+.burger span{
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #ffc77a ;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #ffc77a;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+     top: 0  
+    }
+
+.burger::after { 
+    bottom: 0 
+}
+
+.burger:hover {
+    transform: scale(1.2);
+    color: #FFBC5B;  
+}
+
+a {
+    color: #8F8E8E; 
+    text-decoration: none; 
+   } 
+   a:hover {
+    color: #FFBC5B; 
+   }
+
+   .header {
+    transition: 0.3s; 
+    text-align: center
+   }
+
+   .header:hover {
+    transform: scale(1.2);
+}
+
+.item2:hover {
+    border-bottom: 7px solid #FFBC5B;
+   }
+
+.text {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 56px;
+    background-color: rgb(21, 21, 21);
+    color: #FFBC5B;
+}
+
+.strelka {
+    padding-bottom: 70px;
+}
+
+.movie-container {
+position: relative;
+background-color: rgb(21, 21, 21);
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+color: #b68c52;
+align-items: center;
+}
+
+.serial-container {
+    position: relative;
+    background-color: rgb(21, 21, 21);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #b68c52;
+    align-items: center;
+
+}
+.film {
+    display: inline-block; 
+  
+  }
+  .image img {
+    border-radius: 10px;
+    transition: 0.3s; 
+    display: block; 
+    box-shadow:0 0 10px #ffc77a;
+    background: black;
+    opacity: 0.85
+  }
+  
+  .image img:hover {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+  
+  .image:hover .title{
+    color: #ffc77a;
+}
+.title {
+    padding-top: 15px;
+}
+
+.item1 {
+    flex: 3 1 auto;
+   }
+
+   .item2 {
+    flex: 1 1 auto;
+   }
+
+   .opis {
+   padding-bottom: 2px;
+   }
+   
+
+   .footer {
+display: flex;
+background-color: rgb(21, 21, 21); 
+color: #ffc77a;
+justify-content: center;
+align-items: center;
+padding: 10px;
+font-weight: 500;
+   }
+   
+   @media (min-width: 768px) and (max-width: 1200px){
+    .header-container {
+        flex-direction: column;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .average {
+        padding-bottom: 15px;
+    }
+
+    .movie-container {
+        flex-direction: column; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .serial-container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .strelka {
+        transform: rotate(90deg);
+        padding-top: 70px;
+
+    }
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding: 0;
+}
+
+.info {
+    padding-right: 50px;
+}
+}
+  
+@media (max-width: 768px) {
+
+   .smotrim {
+    padding-bottom: 10px;
+   }
+    .average {
+        padding-bottom: 15px;
+    }
+
+    .movie-container {
+        flex-direction: column; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .serial-container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .strelka {
+        transform: rotate(90deg);
+        padding-top: 70px;
+    }
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding: 0;
+}
+
+.info {
+    padding-right: 50px;
+}
+
+    .burger { 
+        display: flex 
+    }
+
+    .nav{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
